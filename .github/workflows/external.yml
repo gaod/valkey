@@ -27,7 +27,7 @@ jobs:
             --tags -slow
     - name: Archive server log
       if: ${{ failure() }}
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-external-server-log
         path: external-server.log
@@ -55,7 +55,7 @@ jobs:
             --tags -slow
     - name: Archive server log
       if: ${{ failure() }}
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-external-cluster-log
         path: external-server.log
@@ -79,7 +79,7 @@ jobs:
             --tags "-slow -needs:debug"
       - name: Archive server log
         if: ${{ failure() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-external-server-log
           path: external-server.log
